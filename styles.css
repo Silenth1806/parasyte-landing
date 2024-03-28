@@ -1,0 +1,130 @@
+html,
+body {
+    margin: 0;
+    font-family: Nunito;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333333e1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    /* From https://css.glass */
+    background: rgba(114, 114, 114, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(114, 114, 114, 0.3);
+}
+
+.navbar-button {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-rightanchor {
+    margin-left: auto;
+}
+
+.navbar-inner {
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar-appicon {
+    margin-left: 20px;
+    height: 75%;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 5px #222222);
+}
+
+.maincontent-front {
+    height: calc(99.5% - 55px);
+    position: relative;
+    margin-inline: auto;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.maincontent-front-left {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    flex: 1;
+    text-align: center;
+    margin: auto;
+}
+
+.maincontent-front-left img {
+    width: 250px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    -webkit-box-shadow: 0 0 10px #222222;
+    box-shadow: 0 0 10px #222222;
+    animation-timing-function: linear;
+    transition: 250ms ease-in-out;
+}
+
+.maincontent-front-left img:hover {
+    width: 260px;
+    -webkit-box-shadow: 0 0 10px #42b7d4;
+    box-shadow: 0 0 10px #42b7d4;
+}
+
+.maincontent-front-left h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    font-size: 35px;
+}
+
+.maincontent-front-left h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    font-size: 25px;
+}
+
+
+.maincontent-front-right {
+    flex: 2;
+    border: 2px blue solid;
+}
+
+.bg {
+    background: url(https://moewalls.com/wp-content/uploads/2023/08/rei-ayanami-neo-tokyo3-neon-genesis-evangelion-thumb.jpg);
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
